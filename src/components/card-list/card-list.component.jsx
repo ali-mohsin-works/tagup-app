@@ -6,7 +6,14 @@ import CustomCard from "../custom-card/customcard.component";
 const CardList = ({ logs, parrentUpdateState }) => (
   <div className="card-list margins">
     {logs.length ? (
-      logs.map((log) => <LogCard key={log.id} log={log} logs={logs} parrentUpdateState={parrentUpdateState} />)
+      logs.map((log) => (
+        <LogCard
+          key={log.id}
+          log={log}
+          logs={logs}
+          parrentUpdateState={parrentUpdateState}
+        />
+      ))
     ) : (
       <CustomCard>
         <h2>No logs found</h2>
