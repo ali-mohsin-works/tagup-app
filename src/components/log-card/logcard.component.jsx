@@ -11,7 +11,7 @@ class LogCard extends React.Component {
   render() {
     const removeLog = (e) => {
       const r = window.confirm("Do you really want to remove this log?");
-      if (r == true) {
+      if (r === true) {
         console.log(e.target.id);
         const filteredLogs = this.props.logs.filter(
           (log) => log.id !== e.target.id
